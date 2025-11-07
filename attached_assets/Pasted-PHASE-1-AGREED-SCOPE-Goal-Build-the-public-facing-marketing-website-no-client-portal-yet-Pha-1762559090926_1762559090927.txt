@@ -1,0 +1,103 @@
+PHASE 1 – AGREED SCOPE
+
+Goal: Build the public-facing marketing website (no client portal yet).
+
+Phase 1 Deliverables:
+
+Next.js 14 Project Setup & Vercel Deployment
+
+Homepage (Futuristic AI Design)
+
+Dark gradient theme
+
+Teal (#19B2B8) + Orange (#F97316) accents
+
+Modules overview section
+
+Hero tagline & CTA
+
+Technology Page
+
+Overview of MetaDrive™, BrandSynq™, MPX™, etc.
+
+About Page
+
+Story + Mission layout
+
+Demo Page
+
+Integrate the metapulse_live_demo.html logic directly into a Next.js page
+
+Keep Simulate Week working (client-side mock logic)
+
+Contact Page
+
+Form using Web3Forms or Formspree (no backend)
+
+Navigation + Footer + Responsive Layout
+
+Analytics & SEO / AEO Essentials
+
+GA4 + Vercel Analytics
+
+Placeholder for LinkedIn tag
+
+Meta tags, OpenGraph, Twitter preview
+
+JSON-LD structured data for Homepage + Tech + About
+
+Sitemap.xml & robots.txt
+
+Basic Assets Integration
+
+Carousel visuals
+
+Branding assets
+
+Module section icons
+
+Deployment-ready & Polished
+
+WHAT HAS BEEN COMPLETED (AND APPROVED BY CLIENT)
+
+The client has approved the actual coded pages, not just designs:
+
+Page	Status	Notes
+Homepage	✔️ Coded & approved	Design and content integrated
+Technology Page	✔️ Coded & approved	Layout matched client vision
+About Page	✔️ Coded & approved	Content reviewed and accepted
+Demo Page	✔️ Coded & approved	Simulate Week works with mock logic
+Contact Page	✔️ Coded & approved	Form functional + success screen
+Navigation & Footer	✔️ Done	Responsive confirmed
+Overall Theme/UI	✔️ Approved	Colors & typography match brand
+WHAT THE CLIENT HAS PROVIDED
+Brand & Content Assets:
+
+MetaPulse_Web_Assets_Final.zip
+Contains visual assets:
+
+Logos
+
+Carousel banner graphics
+
+Icons / backgrounds / UI elements
+
+SEO + Structure Assets:
+
+MetaPulse_SEO_Assets.zip includes:
+
+File	Purpose
+homepage.json, about.json, technology.json	JSON-LD schema to embed in <head> of each page
+SEO_Titles_MetaDescriptions.txt	Exact titles + meta descriptions to place in metadata config
+Keyword_Map.csv	Page keyword strategy (for SEO copy confirmation)
+Blog_Content_Brief_AEO.txt	Blueprint for first article (for Phase 2 / Blog)
+WHAT IS STILL REMAINING
+Task	Description
+Integrate SEO Titles & Meta Descriptions	Copy the finalized titles / descriptions into <Head> or metadata object in Next.js
+Insert JSON-LD Schema	Add homepage.json, about.json, technology.json into <Head> using <script type="application/ld+json">
+Connect Google Analytics (GA4)	Client needs to provide Measurement ID (G-XXXXXX)
+Add LinkedIn Insight Tag Placeholder	Insert script but keep disabled until client recovers access
+Set up Vercel Hosting	Deploy project & invite client as team member
+Domain Connection (GoDaddy)	After deployment, instruct client to update DNS A + CNAME records
+Footer Social Links	Add Instagram + X (Twitter), LinkedIn later
+Final UI polish & walkthrough video/manual	Short, clear guide for client + team

@@ -1,0 +1,18 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "MetaPulse Intelligence Stack",
+  "url": "https://www.metapulsedigital.com/technology",
+  "brand": {
+    "@type": "Organization",
+    "name": "MetaPulse Digital"
+  },
+  "description": "MetaPulse Digital\u2019s AI technology platform includes MetaDrive\u2122, MPX\u2122, BrandSynq\u2122, DemoOps\u2122, Reorder Accelerator\u2122, AEO Engine\u2122, and Lift Ledger\u2122 \u2014 connecting data, automation, and intelligence into measurable growth.",
+  "applicationCategory": "Marketing Automation Software",
+  "offers": {
+    "@type": "Offer",
+    "price": "Request a Demo",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "MetaPulse Digital",
+  "url": "https://www.metapulsedigital.com",
+  "logo": "https://www.metapulsedigital.com/logo.png",
+  "sameAs": [
+    "https://www.linkedin.com/company/metapulse-digital",
+    "https://twitter.com/metapulsedigital",
+    "https://www.instagram.com/metapulsedigital"
+  ],
+  "description": "MetaPulse Digital builds AI systems for marketing intelligence, automation, and Answer Engine Optimization (AEO). The future of marketing is Answer Intelligence.",
+  "founder": {
+    "@type": "Person",
+    "name": "Gabe Freeman"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "info@metapulsedigital.com",
+    "contactType": "customer support"
+  },
+  "brand": {
+    "@type": "Brand",
+    "name": "MetaPulse Digital",
+    "slogan": "The Future of Marketing is Answer Intelligence"
+  }
+}

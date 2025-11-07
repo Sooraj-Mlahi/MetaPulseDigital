@@ -1,7 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { Mail, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Linkedin, Instagram } from 'lucide-react';
+import { SiX } from 'react-icons/si';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -21,22 +22,47 @@ const Footer = () => {
             <h3 className="font-semibold mb-4">Navigation</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link 
+                  href="/" 
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  data-testid="link-footer-home"
+                >
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/demo" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link 
+                  href="/technology" 
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  data-testid="link-footer-technology"
+                >
+                  Technology
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="/demo" 
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  data-testid="link-footer-demo"
+                >
                   Demo
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link 
+                  href="/about" 
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  data-testid="link-footer-about"
+                >
                   About
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link 
+                  href="/contact" 
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  data-testid="link-footer-contact"
+                >
                   Contact
                 </Link>
               </li>
@@ -56,14 +82,33 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">Connect</h3>
             <div className="flex space-x-4">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a 
+                href="mailto:info@metapulsedigital.com" 
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Email MetaPulse Digital"
+                data-testid="link-social-email"
+              >
                 <Mail className="w-5 h-5" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                <Linkedin className="w-5 h-5" />
+              <a 
+                href="https://www.instagram.com/metapulsedigital" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Follow MetaPulse on Instagram"
+                data-testid="link-social-instagram"
+              >
+                <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                <Twitter className="w-5 h-5" />
+              <a 
+                href="https://twitter.com/metapulsedigital" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Follow MetaPulse on X"
+                data-testid="link-social-twitter"
+              >
+                <SiX className="w-5 h-5" />
               </a>
             </div>
           </div>

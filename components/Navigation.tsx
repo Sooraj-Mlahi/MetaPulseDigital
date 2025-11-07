@@ -22,7 +22,7 @@ const Navigation = () => {
 
   const navLinks = [
     { name: 'Home', path: '/' },
-    { name: 'Technology', path: '/#technology' },
+    { name: 'Technology', path: '/technology' },
     { name: 'Demo', path: '/demo' },
     { name: 'About', path: '/about' },
     { name: 'Contact', path: '/contact' },

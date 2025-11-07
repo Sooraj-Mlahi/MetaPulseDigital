@@ -1,0 +1,18 @@
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "url": "https://www.metapulsedigital.com/about",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "MetaPulse Digital",
+    "foundingDate": "2022",
+    "description": "MetaPulse Digital merges AI, automation, and data orchestration to build the infrastructure for intelligent marketing.",
+    "mission": "To empower brands with AI-first systems that make marketing measurable, adaptive, and intelligent.",
+    "keywords": [
+      "AI marketing company",
+      "marketing intelligence platform",
+      "automation and analytics",
+      "Answer Engine Optimization"
+    ]
+  }
+}
