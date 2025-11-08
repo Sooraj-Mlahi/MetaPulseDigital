@@ -7,7 +7,11 @@
     "dev": "next dev -p 5000",
     "build": "next build",
     "start": "next start -p 5000",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export",
+    "build:godaddy": "BUILD_EXPORT=true npm run build",
+    "deploy:godaddy": "node deploy-godaddy.js",
+    "deploy:static": "BUILD_EXPORT=true npm run build && npm run export"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
