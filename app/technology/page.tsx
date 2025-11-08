@@ -1,9 +1,11 @@
 'use client';
 
+import { useState } from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import { 
   Brain, 
   Gauge, 
@@ -12,7 +14,9 @@ import {
   Repeat, 
   Search, 
   TrendingUp,
-  Sparkles 
+  Sparkles,
+  ChevronLeft,
+  ChevronRight 
 } from 'lucide-react';
 
 const modules = [
@@ -117,6 +121,14 @@ const modules = [
 ];
 
 export default function Technology() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const next = () => setCurrentIndex((prev) => (prev + 1) % modules.length);
+  const prev = () => setCurrentIndex((prev) => (prev - 1 + modules.length) % modules.length);
+
+  const currentModule = modules[currentIndex];
+  const ModuleIcon = currentModule.icon;
+
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -145,6 +157,78 @@ export default function Technology() {
             </p>
           </motion.div>
 
+          {/* Carousel Section */}
+          <div className="max-w-4xl mx-auto mb-20">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentIndex}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -20 }}
+                transition={{ duration: 0.4 }}
+              >
+                <Card className="border-primary/20 bg-card/50 backdrop-blur-sm glow-teal">
+                  <CardHeader className="text-center">
+                    <div className="flex justify-center mb-4">
+                      <div className={`p-4 rounded-xl ${currentModule.bgColor} ${currentModule.borderColor} border glow-teal`}>
+                        <ModuleIcon className="w-12 h-12 text-primary" />
+                      </div>
+                    </div>
+                    <CardTitle className="text-3xl mb-2">{currentModule.name}</CardTitle>
+                    <CardDescription className="text-lg text-primary">{currentModule.description}</CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-6">
+                    <div className="grid grid-cols-2 gap-4">
+                      {currentModule.features.map((feature, idx) => (
+                        <div
+                          key={idx}
+                          className="flex items-center space-x-2 p-3 rounded-lg bg-muted/50 border border-border"
+                          data-testid={`feature-${currentIndex}-${idx}`}
+                        >
+                          <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
+                          <span className="text-sm">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </AnimatePresence>
+
+            <div className="flex justify-center items-center mt-8 space-x-4">
+              <Button 
+                onClick={prev} 
+                variant="outline" 
+                size="icon" 
+                className="rounded-full"
+                data-testid="button-prev"
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </Button>
+              <div className="flex space-x-2">
+                {modules.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setCurrentIndex(idx)}
+                    className={`w-2 h-2 rounded-full transition-all ${
+                      idx === currentIndex ? 'bg-primary w-8' : 'bg-muted-foreground/30'
+                    }`}
+                    data-testid={`button-dot-${idx}`}
+                  />
+                ))}
+              </div>
+              <Button 
+                onClick={next} 
+                variant="outline" 
+                size="icon" 
+                className="rounded-full"
+                data-testid="button-next"
+              >
+                <ChevronRight className="w-5 h-5" />
+              </Button>
+            </div>
+          </div>
+
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
               {modules.map((module, index) => (
@@ -156,9 +240,9 @@ export default function Technology() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   data-testid={`card-module-${index}`}
                 >
-                  <Card className={`h-full ${module.borderColor} bg-card/50 backdrop-blur-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1`}>
+                  <Card className={`h-full ${module.borderColor} bg-card/50 backdrop-blur-sm hover:glow-teal hover:shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 group`}>
                     <CardHeader>
-                      <div className={`w-14 h-14 rounded-xl ${module.bgColor} ${module.borderColor} border flex items-center justify-center mb-4`}>
+                      <div className={`w-14 h-14 rounded-xl ${module.bgColor} ${module.borderColor} border flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                         <module.icon className={`w-7 h-7 ${module.color}`} />
                       </div>
                       <CardTitle className="text-2xl">{module.name}</CardTitle>
