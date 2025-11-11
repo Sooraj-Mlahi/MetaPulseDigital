@@ -71,11 +71,11 @@ Please verify these URLs are correct:
 - Correct URL: ________________________________
 
 **Twitter/X:** 
-- Current: https://twitter.com/metapulsedigital  
+- Current: https://x.com/MetapulseD  
 - Correct URL: ________________________________
 
 **Instagram:**
-- Current: https://www.instagram.com/metapulsedigital
+- Current: https://www.instagram.com/meta.pulsedigital/
 - Correct URL: ________________________________
 
 ---

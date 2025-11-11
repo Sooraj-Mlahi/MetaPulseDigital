@@ -2,6 +2,17 @@
 const nextConfig = {
   reactStrictMode: true,
   
+  // Completely disable development overlay and indicators
+  devIndicators: {
+    buildActivity: false,
+    buildActivityPosition: 'bottom-right',
+  },
+  
+  // Disable the development overlay completely
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+  
   // Configuration for GoDaddy deployment
   output: process.env.BUILD_EXPORT === 'true' ? 'export' : undefined,
   trailingSlash: true,

@@ -91,7 +91,7 @@ const Footer = () => {
                 <Mail className="w-5 h-5" />
               </a>
               <a 
-                href="https://www.instagram.com/metapulsedigital" 
+                href="https://www.instagram.com/meta.pulsedigital/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
@@ -101,7 +101,7 @@ const Footer = () => {
                 <Instagram className="w-5 h-5" />
               </a>
               <a 
-                href="https://twitter.com/metapulsedigital" 
+                href="https://x.com/MetapulseD" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"

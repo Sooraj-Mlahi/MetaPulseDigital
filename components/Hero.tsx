@@ -14,13 +14,13 @@ const Hero = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.4 }}
           className="text-center max-w-5xl mx-auto"
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
+            transition={{ delay: 0.1, duration: 0.3 }}
             className="inline-block mb-6 px-6 py-2 rounded-full bg-primary/10 border border-primary/20 glow-teal"
           >
             <span className="text-primary font-medium text-sm">AI-Powered Marketing Intelligence</span>
@@ -29,7 +29,7 @@ const Hero = () => {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
+            transition={{ delay: 0.1, duration: 0.4 }}
             className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
           >
             The Future of Marketing is{' '}
@@ -39,7 +39,7 @@ const Hero = () => {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.8 }}
+            transition={{ delay: 0.2, duration: 0.4 }}
             className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto"
           >
             MetaPulse connects intelligence, automation, and growth in one unified AI system.
@@ -48,7 +48,7 @@ const Hero = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8, duration: 0.8 }}
+            transition={{ delay: 0.3, duration: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <Link href="/demo">
@@ -69,7 +69,7 @@ const Hero = () => {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1.2, duration: 1 }}
+            transition={{ delay: 0.2, duration: 0.4 }}
             className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
           >
             {[

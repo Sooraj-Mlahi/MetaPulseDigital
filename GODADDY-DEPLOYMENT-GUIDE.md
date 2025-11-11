@@ -36,8 +36,8 @@ Address: ____________________
 ### 🌐 4. Social Media Links Verification
 ```
 LinkedIn: https://www.linkedin.com/company/metapulse-digital ✓ or ❌
-Twitter: https://twitter.com/metapulsedigital ✓ or ❌  
-Instagram: https://www.instagram.com/metapulsedigital ✓ or ❌
+Twitter: https://x.com/MetapulseD ✓ or ❌  
+Instagram: https://www.instagram.com/meta.pulsedigital/ ✓ or ❌
 ```
 
 ## 🛠️ Setup Instructions

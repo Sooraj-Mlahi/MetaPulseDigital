@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import RemoveNextDevElements from "@/components/RemoveNextDevElements";
 import Script from "next/script";
 
 const spaceGrotesk = Space_Grotesk({
@@ -48,8 +49,8 @@ const organizationSchema = {
   "logo": "https://www.metapulsedigital.com/assets/MetaPulse_Styled_Text_Logo.png",
   "sameAs": [
     "https://www.linkedin.com/company/metapulse-digital",
-    "https://twitter.com/metapulsedigital",
-    "https://www.instagram.com/metapulsedigital"
+    "https://x.com/MetapulseD",
+    "https://www.instagram.com/meta.pulsedigital/"
   ],
   "description": "MetaPulse Digital builds AI systems for marketing intelligence, automation, and Answer Engine Optimization (AEO). The future of marketing is Answer Intelligence.",
   "founder": {
@@ -119,7 +120,10 @@ export default function RootLayout({
           />
         )}
       </head>
-      <body className={`${spaceGrotesk.variable} ${inter.variable} antialiased`}>
+      <body 
+        className={`${spaceGrotesk.variable} ${inter.variable} antialiased`}
+        suppressHydrationWarning={true}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
@@ -127,6 +131,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <TooltipProvider>
+            <RemoveNextDevElements />
             {children}
             <Toaster />
             <Sonner />

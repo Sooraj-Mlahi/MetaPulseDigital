@@ -97,3 +97,54 @@ All colors MUST be HSL.
     background-clip: text;
   }
 }
+
+/* Hide Next.js development indicators and logos - COMPREHENSIVE */
+#__next-build-watcher,
+[data-nextjs-scroll-focus-boundary],
+.__next-dev-overlay,
+.__next-dev-overlay-backdrop,
+[id^="__next"],
+[class*="next-dev"],
+[class*="nextjs"],
+[class*="__next"],
+div[style*="position: fixed"][style*="bottom"][style*="left"],
+div[style*="position: fixed"][style*="bottom: 16px"],
+div[style*="position: fixed"][style*="left: 16px"],
+div[style*="z-index: 9000"],
+div[style*="z-index: 999999"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Hide any development watermarks, logos, or branding */
+div[style*="position: fixed"]:has(svg[aria-label*="Next"]),
+div[style*="position: fixed"]:has(svg[aria-label*="next"]),
+div[style*="position: fixed"]:has(img[alt*="Next"]),
+div[style*="position: fixed"]:has(img[alt*="next"]),
+div[style*="position: fixed"]:has([src*="next"]),
+div[style*="position: fixed"]:has([href*="next"]),
+div[style*="position: fixed"] svg[viewBox*="0 0 180 180"],
+div[style*="position: fixed"] svg[fill*="white"],
+[data-nextjs],
+[data-next] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* Target specific Next.js development elements */
+div[style*="position:fixed"][style*="bottom:16px"][style*="left:16px"],
+div[style*="position: fixed; bottom: 16px; left: 16px"],
+div[style*="border-radius"][style*="position: fixed"][style*="bottom"],
+div[style*="padding"][style*="position: fixed"][style*="bottom"][style*="background"] {
+  display: none !important;
+}
+
+/* Hide any floating development tools */
+div[role="button"][style*="position: fixed"],
+button[style*="position: fixed"][style*="bottom"],
+a[style*="position: fixed"][style*="bottom"] {
+  display: none !important;
+}
