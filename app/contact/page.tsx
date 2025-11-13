@@ -11,6 +11,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Mail, MapPin, Phone } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { Toaster } from '@/components/ui/toaster';
 
 export default function Contact() {
   const { toast } = useToast();
@@ -24,9 +25,26 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Basic validation
+    if (!formData.name || !formData.email || !formData.message) {
+      toast({
+        title: 'Missing Information',
+        description: 'Please fill in all required fields.',
+        variant: 'destructive',
+      });
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
+      const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+      
+      if (!accessKey) {
+        throw new Error('Web3Forms access key not configured');
+      }
+
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
@@ -34,7 +52,7 @@ export default function Contact() {
           'Accept': 'application/json',
         },
         body: JSON.stringify({
-          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
+          access_key: accessKey,
           name: formData.name,
           email: formData.email,
           company: formData.company,
@@ -45,14 +63,15 @@ export default function Contact() {
 
       const result = await response.json();
 
-      if (result.success) {
+      if (response.ok && result.success) {
         toast({
           title: 'Message Sent!',
           description: "We'll get back to you within 24 hours.",
         });
         setFormData({ name: '', email: '', company: '', message: '' });
       } else {
-        throw new Error('Form submission failed');
+        console.error('Web3Forms error:', result);
+        throw new Error(result.message || 'Form submission failed');
       }
     } catch (error) {
       console.error('Form submission error:', error);
@@ -246,6 +265,7 @@ export default function Contact() {
       </div>
 
       <Footer />
+      <Toaster />
     </div>
   );
 }
