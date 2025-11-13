@@ -45,23 +45,40 @@ export default function Contact() {
         throw new Error('Web3Forms access key not configured');
       }
 
+      const formPayload = {
+        access_key: accessKey,
+        name: formData.name,
+        email: formData.email,
+        company: formData.company || '',
+        message: formData.message,
+        subject: `New Contact Form Submission from ${formData.name}`,
+        from_name: formData.name,
+        replyto: formData.email,
+        botcheck: '', // honeypot field
+      };
+
+      console.log('Submitting form with payload:', { ...formPayload, access_key: '[HIDDEN]' });
+
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json',
         },
-        body: JSON.stringify({
-          access_key: accessKey,
-          name: formData.name,
-          email: formData.email,
-          company: formData.company,
-          message: formData.message,
-          subject: `New Contact Form Submission from ${formData.name}`,
-        }),
+        body: JSON.stringify(formPayload),
       });
 
+      console.log('Response status:', response.status);
+      console.log('Response headers:', Object.fromEntries(response.headers.entries()));
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error('Response error:', errorText);
+        throw new Error(`HTTP ${response.status}: ${errorText}`);
+      }
+
       const result = await response.json();
+      console.log('Response result:', result);
 
       if (response.ok && result.success) {
         toast({
