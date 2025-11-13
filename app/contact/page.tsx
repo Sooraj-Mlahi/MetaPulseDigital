@@ -45,17 +45,19 @@ export default function Contact() {
         throw new Error('Web3Forms access key not configured');
       }
 
-      const formPayload = {
+      // Try the most basic Web3Forms format first
+      const formPayload: any = {
         access_key: accessKey,
         name: formData.name,
         email: formData.email,
-        company: formData.company || '',
         message: formData.message,
-        subject: `New Contact Form Submission from ${formData.name}`,
-        from_name: formData.name,
-        replyto: formData.email,
-        botcheck: '', // honeypot field
+        botcheck: ''
       };
+      
+      // Add optional fields only if they exist
+      if (formData.company) {
+        formPayload.company = formData.company;
+      }
 
       console.log('Submitting form with payload:', { ...formPayload, access_key: '[HIDDEN]' });
 
