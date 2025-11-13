@@ -117,12 +117,13 @@ access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY || '',
 
 ## Deployment
 
-This application is configured for deployment on Replit:
+This application is deployed on Vercel:
 
-- Runs on port 5000
-- Build command: `npm run build`
-- Start command: `npm run start`
-- Production-ready with Next.js autoscale deployment
+- **Live Site**: [MetaPulse Digital](https://metapulsedigital.com)
+- **Build Command**: `npm run build`
+- **Framework**: Next.js (Auto-detected)
+- **Environment Variables**: Configured in Vercel dashboard
+- **Custom Domain**: metapulsedigital.com
 
 ## Development Notes
 
