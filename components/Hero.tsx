@@ -42,7 +42,7 @@ const Hero = () => {
             transition={{ delay: 0.2, duration: 0.4 }}
             className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto"
           >
-            MetaPulse connects intelligence, automation, and growth in one unified AI system.
+            MetaPulse Digital connects intelligence, automation, and growth in one unified AI system.
           </motion.p>
 
           <motion.div

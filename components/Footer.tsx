@@ -12,7 +12,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <div className="text-2xl font-bold text-gradient">MetaPulse</div>
+            <div className="text-2xl font-bold text-gradient">MetaPulse Digital</div>
             <p className="text-sm text-muted-foreground">
               The Future of Marketing is Answer Intelligence
             </p>

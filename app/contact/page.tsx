@@ -149,8 +149,8 @@ export default function Contact() {
                     </div>
                     <div>
                       <div className="font-medium mb-1">Email</div>
-                      <a href="mailto:hello@metapulse.digital" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                        hello@metapulse.digital
+                      <a href="mailto:info@metapulsedigital.com" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                        info@metapulsedigital.com
                       </a>
                     </div>
                   </div>
@@ -161,8 +161,8 @@ export default function Contact() {
                     </div>
                     <div>
                       <div className="font-medium mb-1">Phone</div>
-                      <a href="tel:+1-555-123-4567" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                        +1 (555) 123-4567
+                      <a href="tel:646-820-5544" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                        646-820-5544
                       </a>
                     </div>
                   </div>
@@ -174,8 +174,8 @@ export default function Contact() {
                     <div>
                       <div className="font-medium mb-1">Location</div>
                       <p className="text-sm text-muted-foreground">
-                        San Francisco, CA<br />
-                        United States
+                        345 Woodcliff Dr.<br />
+                        205 Hudson St. New York, NY
                       </p>
                     </div>
                   </div>
@@ -187,7 +187,7 @@ export default function Contact() {
                   <div className="text-center">
                     <div className="text-2xl font-bold mb-2">Ready to Scale?</div>
                     <p className="text-sm text-muted-foreground">
-                      Book a demo to see MetaPulse AI in action
+                      Book a demo to see MetaPulse Digital AI in action
                     </p>
                   </div>
                 </CardContent>
@@ -209,7 +209,7 @@ export default function Contact() {
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <Label htmlFor="name">Name *</Label>
+                        <Label htmlFor="name">Name</Label>
                         <Input
                           id="name"
                           name="name"
@@ -223,7 +223,7 @@ export default function Contact() {
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="email">Email *</Label>
+                        <Label htmlFor="email">Email</Label>
                         <Input
                           id="email"
                           name="email"
@@ -252,7 +252,7 @@ export default function Contact() {
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="message">Message *</Label>
+                      <Label htmlFor="message">Message</Label>
                       <Textarea
                         id="message"
                         name="message"
