@@ -23,14 +23,14 @@ const AboutPreview = () => {
             </h2>
             
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              MetaPulse connects intelligence, automation, and growth in one unified AI system. 
-              We're not just optimizing campaigns — we're building the infrastructure for the next 
+              MetaPulse Digital connects intelligence, automation, and growth in one unified AI system. 
+              We're not just optimizing campaigns, we're building the infrastructure for the next 
               generation of marketing intelligence.
             </p>
 
             <p className="text-lg text-muted-foreground mb-10">
               Our mission is to empower brands with AI-driven insights that transform how they 
-              understand, reach, and engage their audiences in an answer-first world.
+              understand, reach, and engage their audiences in an answer first world.
             </p>
 
             <Link href="/about">

@@ -45,7 +45,7 @@ export default function About() {
                 <CardContent className="space-y-4 text-lg">
                   <p className="text-muted-foreground leading-relaxed">
                     MetaPulse Digital exists to transform how brands leverage AI for growth. We believe the future 
-                    of marketing isn't about louder ads or more channels — it's about intelligent systems that 
+                    of marketing isn't about louder ads or more channels. it's about intelligent systems that 
                     understand intent, predict behavior, and deliver value at the moment of decision.
                   </p>
                   <p className="text-muted-foreground leading-relaxed">
@@ -129,7 +129,7 @@ export default function About() {
                   </p>
 
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    The future of marketing is Answer Intelligence — and MetaPulse is building the 
+                    The future of marketing is Answer Intelligence and MetaPulse Digital is building the 
                     infrastructure to power it.
                   </p>
                 </CardContent>

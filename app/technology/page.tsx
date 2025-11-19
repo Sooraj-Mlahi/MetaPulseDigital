@@ -286,7 +286,7 @@ export default function Technology() {
                   </p>
                   <p className="text-lg text-muted-foreground leading-relaxed">
                     From brand intelligence to campaign automation, from demo qualification to 
-                    attribution tracking — MetaPulse connects every piece of your marketing 
+                    attribution tracking, MetaPulse Digital connects every piece of your marketing 
                     infrastructure into one intelligent system.
                   </p>
                   <div className="pt-6">
